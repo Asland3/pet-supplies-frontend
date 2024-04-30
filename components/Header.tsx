@@ -18,6 +18,12 @@ export default function Header() {
         </Link>
         <Link
           className="flex items-center py-2 text-lg font-semibold hover:text-primary"
+          href="Products"
+        >
+          Products
+        </Link>
+        <Link
+          className="flex items-center py-2 text-lg font-semibold hover:text-primary"
           href="About"
         >
           About

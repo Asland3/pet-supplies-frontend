@@ -1,5 +1,4 @@
 "use client";
-import { Button } from "@/components/ui/button";
 // import { useEffect, useState } from "react";
 
 // const apiUrl = "https://localhost/wordpress/wp-json/wc/v3/products";
