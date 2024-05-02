@@ -12,15 +12,15 @@ export default function Header() {
       <div className="flex gap-4 py-6">
         <Link
           className="flex items-center py-2 text-lg font-semibold hover:text-primary"
-          href="/"
+          href="/Wordpress"
         >
-          Home
+          Wordpress
         </Link>
         <Link
           className="flex items-center py-2 text-lg font-semibold hover:text-primary"
-          href="Products"
+          href="/Laravel"
         >
-          Products
+          Laravel
         </Link>
         <Link
           className="flex items-center py-2 text-lg font-semibold hover:text-primary"

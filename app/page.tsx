@@ -1,5 +1,7 @@
 "use client";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const apiUrl =
@@ -23,34 +25,15 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-44">
-      <h1 className="text-3xl font-bold text-center">WordPress API</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 md:p-8 lg:p-10">
-        {products.map((product: any) => (
-          <div
-            className="bg-white rounded-lg shadow-lg overflow-hidden dark:bg-gray-900 key={product.id}"
-            key={product.id}
-          >
-            <Image
-              alt={product.name}
-              className="w-full h-60 object-cover"
-              height="300"
-              src={product.images[0].src}
-              width="400"
-            />
-            <div className="p-4 space-y-2">
-              <h3
-                className="text-lg font-semibold"
-                dangerouslySetInnerHTML={{ __html: product.name }}
-              ></h3>
-              <p
-                className="text-gray-500 dark:text-gray-400 text-sm"
-                dangerouslySetInnerHTML={{ __html: product.description }}
-              ></p>
-              <span className="text-lg font-semibold">{`$${product.price}`}</span>
-            </div>
-          </div>
-        ))}
+    <main className="flex flex-col h-screen justify-center items-center ">
+      <h1 className="text-4xl font-bold pb-10">Go to your desired api</h1>
+      <div className="flex gap-5">
+        <Button asChild size={"lg"}>
+          <Link href={"/Wordpress"}>Wordpress</Link>
+        </Button>
+        <Button size={"lg"}>
+          <Link href={"/Laravel"}>Laravel</Link>
+        </Button>
       </div>
     </main>
   );
