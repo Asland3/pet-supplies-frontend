@@ -46,7 +46,7 @@ function Wordpress() {
                 className="text-gray-500 dark:text-gray-400 text-sm"
                 dangerouslySetInnerHTML={{ __html: product.description }}
               ></p>
-              <span className="text-lg font-semibold">{`$${product.price}`}</span>
+              <span className="text-lg font-semibold">${product.price}</span>
             </div>
           </div>
         ))}
