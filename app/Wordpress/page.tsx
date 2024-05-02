@@ -19,7 +19,8 @@ function Wordpress() {
       },
     })
       .then((res) => res.json())
-      .then((data) => setProducts(data));
+      .then((data) => setProducts(data))
+      .catch((error) => console.error(error));
   }, []);
   return (
     <main className="flex min-h-screen flex-col items-center justify-between pt-10">
