@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 export default function Products() {
@@ -9,6 +10,7 @@ export default function Products() {
     fetch("https://pet-supplies-laravel-production.up.railway.app/products")
       .then((response) => response.json())
       .then((data) => setProducts(data))
+      .then((data) => console.log(data))
       .catch((error) => console.error(error));
   }, []);
 
@@ -21,7 +23,7 @@ export default function Products() {
             key={product.id}
             className="bg-white rounded-lg shadow-lg overflow-hidden dark:bg-gray-900"
           >
-            <img
+            <Image
               alt={product.name}
               className="w-full h-60 object-cover"
               height="300"
@@ -42,7 +44,6 @@ export default function Products() {
   );
 }
 
-
-// Products:1 Access to fetch at 'https://pet-supplies-laravel-production.up.railway.app/products' from origin 'http://localhost:3000' has 
-// been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, 
+// Products:1 Access to fetch at 'https://pet-supplies-laravel-production.up.railway.app/products' from origin 'http://localhost:3000' has
+// been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs,
 // set the request's mode to 'no-cors' to fetch the resource with CORS disabled.

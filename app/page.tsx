@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const apiUrl =
@@ -26,8 +27,11 @@ export default function Home() {
       <h1 className="text-3xl font-bold text-center">WordPress API</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 md:p-8 lg:p-10">
         {products.map((product: any) => (
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden dark:bg-gray-900 key={product.id}">
-            <img
+          <div
+            className="bg-white rounded-lg shadow-lg overflow-hidden dark:bg-gray-900 key={product.id}"
+            key={product.id}
+          >
+            <Image
               alt={product.name}
               className="w-full h-60 object-cover"
               height="300"
