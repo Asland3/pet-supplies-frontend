@@ -31,7 +31,7 @@ export default function Home() {
         <Button asChild size={"lg"}>
           <Link href={"/Wordpress"}>Wordpress</Link>
         </Button>
-        <Button size={"lg"}>
+        <Button asChild size={"lg"}>
           <Link href={"/Laravel"}>Laravel</Link>
         </Button>
       </div>
