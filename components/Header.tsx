@@ -4,7 +4,7 @@ import { ModeToggle } from "./DarkMode";
 
 export default function Header() {
   return (
-    <nav className="flex h-20 w-full items-center px-4 gap-4 justify-between">
+    <nav className="flex h-20 w-full items-center px-4 gap-4 justify-between sticky top-0">
       <Link className="flex items-center py-2 text-lg font-semibold" href="/">
         <PetShopIcon className="w-16 h-16" />
         Pet Supplies
